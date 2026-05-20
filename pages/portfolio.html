@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Portfolio | Ragib Ahsan</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../shared/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="../shared/styles.css" rel="stylesheet"/>
+  <style>
+    @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+    .skeleton { background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-background selection:bg-primary selection:text-on-primary" data-page="portfolio" data-page-in-pages>
+
+  <!-- ===== DESKTOP FACE ===== -->
+  <div class="viewport-desktop">
+    <div id="nav-desktop"></div>
+
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16">
+      <header class="mb-16 md:mb-20">
+        <h1 class="font-headline-xl text-headline-xl text-on-surface mb-6 max-w-3xl">
+          This section showcases my product thinking and project execution work.
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          A synthesis of technical engineering and commercial strategy. From medical logistics to autonomous systems, I focus on building scalable solutions for complex operational challenges.
+        </p>
+      </header>
+
+      <div class="flex gap-1 border-b border-white/5 mb-8 md:mb-12 overflow-x-auto">
+        <button id="tab-product" class="tab-btn px-4 md:px-8 py-3 md:py-4 font-label-sm md:font-label-md text-label-sm md:text-label-md text-primary border-b-2 border-primary bg-white/5 whitespace-nowrap">Product Management</button>
+        <button id="tab-project" class="tab-btn px-4 md:px-8 py-3 md:py-4 font-label-sm md:font-label-md text-label-sm md:text-label-md text-on-surface-variant hover:text-on-surface hover:bg-white/5 transition-all whitespace-nowrap">Project Management</button>
+      </div>
+
+      <div id="product-content" class="grid grid-cols-12 gap-gutter"></div>
+      <div id="project-content" class="grid grid-cols-12 gap-gutter" style="display:none"></div>
+
+      <section class="mt-16 md:mt-24 py-12 md:py-16 border-t border-white/10 text-center">
+        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Ready to execute your next vision?</h2>
+        <div class="flex justify-center">
+          <a href="contact.html" class="bg-primary text-on-primary px-8 py-3 font-label-md text-label-md hover:opacity-90 transition-all no-underline rounded-lg">Schedule Strategy Call</a>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Deep Dive Overlay (outside all faces so always visible) -->
+  <div id="deepdive-overlay" class="fixed inset-0 z-[110] hidden">
+    <div id="deepdive-backdrop" class="absolute inset-0 bg-black/85"></div>
+    <div class="absolute inset-4 md:inset-8 lg:inset-12 bg-surface rounded-2xl overflow-hidden flex flex-col shadow-2xl border border-white/10">
+      <div class="flex justify-between items-start p-4 md:p-6 border-b border-white/10 shrink-0">
+        <div>
+          <h3 id="deepdive-title" class="font-headline-md text-headline-md text-on-surface"></h3>
+          <p id="deepdive-subtitle" class="font-label-sm text-label-sm text-on-surface-variant mt-1"></p>
+        </div>
+        <button id="deepdive-close" class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-on-surface bg-white/5 hover:bg-white/10 rounded-full transition-all">
+          <span class="material-symbols-outlined text-2xl" style="font-variation-settings:'FILL' 1;">close</span>
+        </button>
+      </div>
+      <div id="deepdive-body" class="flex-1 overflow-y-auto p-4 md:p-8 space-y-8"></div>
+    </div>
+  </div>
+
+  <!-- ===== TABLET FACE ===== -->
+  <div class="viewport-tablet">
+    <div id="nav-tablet"></div>
+    <main style="padding-top: 5rem; padding-bottom: 4rem; max-width: 1280px; margin: 0 auto; padding-left: 2rem; padding-right: 2rem;">
+      <header style="margin-bottom: 2rem;">
+        <h1 style="font-size: 40px; font-weight: 600; letter-spacing: -0.02em; color: #dae2fd; margin-bottom: 1rem;">Selected Work</h1>
+        <p style="font-size: 18px; color: #bccbb9; max-width: 48rem;">A synthesis of technical engineering and commercial strategy. Building scalable solutions for complex operational challenges.</p>
+      </header>
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <button id="tab-product-t" style="padding: 0.75rem 2rem; font-size: 14px; font-weight: 700; color: #4be277; border-bottom: 2px solid #4be277; background: rgba(255,255,255,0.05); white-space: nowrap;">Product Management</button>
+        <button id="tab-project-t" style="padding: 0.75rem 2rem; font-size: 14px; font-weight: 700; color: #bccbb9; white-space: nowrap;">Project Management</button>
+      </div>
+      <div id="product-content-tablet"></div>
+      <div id="project-content-tablet" style="display:none;"></div>
+    </main>
+    <div id="site-footer"></div>
+  </div>
+
+  <!-- ===== MOBILE FACE ===== -->
+  <div class="viewport-mobile">
+    <div class="reading-progress" id="reading-progress">
+      <div class="reading-progress-bar" id="reading-progress-bar"></div>
+    </div>
+    <div id="nav-mobile"></div>
+    <main style="padding-top: 5rem; padding-bottom: 5rem; padding-left: 1rem; padding-right: 1rem;">
+      <h1 style="font-size: 30px; font-weight: 600; margin-bottom: 0.5rem; color: #dae2fd;">Selected Work</h1>
+      <div style="display: flex; gap: 0.25rem; margin-bottom: 1.5rem; overflow-x: auto; border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <button id="tab-product-m" style="padding: 0.75rem 1.25rem; font-size: 12px; font-weight: 700; color: #4be277; border-bottom: 2px solid #4be277; background: rgba(255,255,255,0.05); white-space: nowrap;">Product</button>
+        <button id="tab-project-m" style="padding: 0.75rem 1.25rem; font-size: 12px; font-weight: 700; color: #bccbb9; white-space: nowrap;">Project</button>
+      </div>
+      <div id="product-content-mobile"></div>
+      <div id="project-content-mobile" style="display:none;"></div>
+    </main>
+  </div>
+
+  <script src="../shared/sheet-data.js"></script>
+  <script src="../shared/nav-data.js"></script>
+  <script src="../shared/content-sync.js"></script>
+  <script src="../shared/load-components.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', async function() {
+
+    function esc(str) { var d = document.createElement('div'); d.textContent = str || ''; return d.innerHTML; }
+    function img(p) { return p ? '../' + p.replace(/^\.\.\//, '') : ''; }
+
+    // ===== Desktop rendering (existing) =====
+    function buildSkeletonCards(count, isProject) {
+      var html = '';
+      for (var i = 0; i < count; i++) {
+        html += '<div class="col-span-12 glass-panel p-6 md:p-12">';
+        html += '<div class="flex justify-between mb-6"><div class="h-7 w-28 skeleton"></div><div class="h-7 w-40 skeleton"></div></div>';
+        html += '<div class="flex items-center gap-4 mb-6"><div class="w-14 h-14 rounded-full skeleton shrink-0"></div><div class="flex-1"><div class="h-7 w-48 skeleton mb-2"></div><div class="h-5 w-64 skeleton"></div></div></div>';
+        if (isProject) {
+          html += '<div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div class="space-y-4"><div class="h-5 skeleton w-full"></div><div class="h-5 skeleton w-full"></div><div class="h-5 skeleton w-3/4"></div><div class="h-5 skeleton w-full"></div><div class="h-5 skeleton w-5/6"></div></div><div class="h-[320px] skeleton"></div></div>';
+        } else {
+          html += '<div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div class="space-y-4"><div class="h-5 skeleton w-full"></div><div class="h-5 skeleton w-full"></div><div class="h-5 skeleton w-3/4"></div></div><div class="h-[320px] skeleton"></div></div>';
+        }
+        html += '</div>';
+      }
+      return html;
+    }
+
+    function buildProductHTML(p) {
+      var tags = parseList(p.tag);
+      var scopeTags = parseList(p.scopeTags);
+      var hasIcon = p.iconImage && p.iconImage.trim();
+      var hasCta2 = p.cta2Text && p.cta2Text.trim();
+      var imageRight = p.imagePosition !== 'left';
+      var usePreview = p.ctaType === 'preview';
+      var cta2Preview = p.cta2Type === 'preview';
+
+      function iconTag() {
+        if (hasIcon) return '<img class="w-full h-full object-contain" src="' + img(p.iconImage) + '" alt="' + esc(p.title) + '"/>';
+        return esc(getInitials(p.title));
+      }
+
+      function ctaBtn(text, link, type, preview, primary) {
+        var cls = primary
+          ? 'inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/30 font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-primary/20 transition-all no-underline w-fit'
+          : 'inline-flex items-center gap-1.5 bg-transparent text-on-surface-variant border border-white/10 font-label-sm text-label-sm px-4 py-2 rounded-lg hover:bg-white/5 hover:text-on-surface transition-all no-underline w-fit';
+        if (type === 'page') return '<a href="' + esc(link) + '" class="' + cls + '"><span class="material-symbols-outlined text-[18px]">open_in_new</span> ' + esc(text) + '</a>';
+        if (preview) return '<a href="#" data-preview="' + esc(link) + '" class="' + cls + '"><span class="material-symbols-outlined text-[18px]">open_in_new</span> ' + esc(text) + '</a>';
+        return '<a href="' + esc(link) + '" target="_blank" rel="noopener" class="' + cls + '"><span class="material-symbols-outlined text-[16px]">open_in_new</span> ' + esc(text) + '</a>';
+      }
+
+      var textCol = '<div><div class="space-y-6 mb-8">'
+        + '<div><h4 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wider">Problem</h4><p class="font-body-sm text-body-sm text-on-surface-variant">' + esc(p.problem) + '</p></div>'
+        + '<div><h4 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wider">Insight</h4><p class="font-body-sm text-body-sm text-on-surface-variant">' + esc(p.insight) + '</p></div>'
+        + '<div><h4 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wider">Solution</h4><p class="font-body-sm text-body-sm text-on-surface-variant">' + esc(p.solution) + '</p></div></div>'
+        + '<div><h4 class="font-label-md text-label-md text-primary mb-3 uppercase tracking-wider">Product Scope</h4><div class="flex flex-wrap gap-2">'
+        + scopeTags.map(function(t) { return '<span class="bg-white/5 text-on-surface-variant px-3 py-1 rounded-full text-label-sm font-label-sm">' + esc(t) + '</span>'; }).join('')
+        + '</div></div></div>';
+
+      var imgCol = '<div class="flex flex-col"><div class="border border-white/10 rounded overflow-hidden h-[320px] md:h-[420px]">'
+        + '<img class="w-full h-full object-contain bg-surface-container-low p-4" src="' + img(p.imagePath) + '"/></div>'
+        + '<div class="mt-6">' + ctaBtn(p.ctaText, p.ctaLink, p.ctaType, usePreview, true);
+      if (hasCta2) imgCol += '<div class="mt-2">' + ctaBtn(p.cta2Text, p.cta2Link, p.cta2Type, cta2Preview, false) + '</div>';
+      imgCol += '</div></div>';
+
+      return '<div class="col-span-12 glass-panel p-6 md:p-12 relative overflow-hidden">'
+        + '<div class="flex justify-between items-center mb-6 relative z-10">'
+        + '<span class="bg-primary/15 text-primary border border-primary/30 font-label-sm text-label-sm px-4 py-1 rounded-full tracking-wider uppercase">' + esc(p.badge) + '</span>'
+        + '<span class="bg-white/5 text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded border border-white/10 text-right">' + esc(tags.join(' \u00b7 ')) + '</span></div>'
+        + '<div class="flex items-center gap-4 mb-6 relative z-10">'
+        + '<div class="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-fixed flex items-center justify-center text-on-primary font-bold text-xl shadow-lg shrink-0' + (hasIcon ? ' p-2' : '') + '">' + iconTag() + '</div>'
+        + '<div><h3 class="font-headline-lg text-headline-lg text-on-surface mb-1">' + esc(p.title) + '</h3><p class="font-label-sm text-label-sm text-on-surface-variant">' + esc(p.subtitle) + '</p></div></div>'
+        + '<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 relative z-10">'
+        + (imageRight ? textCol + imgCol : imgCol + textCol) + '</div></div>';
+    }
+
+    function buildProjectHTML(p) {
+      var tags = parseList(p.tag);
+      var impactBullets = parseList(p.impactBullets);
+      var execBullets = parseList(p.executionBullets);
+      var imageRight = p.imagePosition !== 'left';
+      var imgCount = parseInt(p.imageCount) || 1;
+
+      var carouselHTML = '<div class="border border-white/10 rounded overflow-hidden h-[320px] md:h-[420px]"><div class="relative w-full h-full group carousel"><div class="carousel-track flex h-full transition-transform duration-500 ease-in-out">';
+      for (var i = 1; i <= imgCount; i++) {
+        carouselHTML += '<img class="min-w-full w-full h-full object-contain bg-surface-container-low p-4 shrink-0" src="' + img(p.imageDir) + i + '.jpg" alt="' + esc(p.title) + ' ' + i + '"/>';
+      }
+      carouselHTML += '</div>'
+        + '<button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-black/40 hover:bg-black/60 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10"><span class="material-symbols-outlined text-lg">chevron_left</span></button>'
+        + '<button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-black/40 hover:bg-black/60 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity z-10"><span class="material-symbols-outlined text-lg">chevron_right</span></button>'
+        + '<div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 carousel-dots">';
+      for (var d = 0; d < imgCount; d++) {
+        carouselHTML += '<span class="w-2 h-2 rounded-full ' + (d === 0 ? 'bg-white/80' : 'bg-white/30') + '"></span>';
+      }
+      carouselHTML += '</div></div></div>';
+
+      var textCol = '<div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">' + esc(p.intro) + '</p>'
+        + '<div class="space-y-2 mb-6 p-4 border border-white/10 bg-white/5 rounded-lg">'
+        + '<div><span class="font-label-sm text-label-sm text-primary">Role:</span> <span class="font-body-sm text-body-sm text-on-surface-variant">' + esc(p.role) + '</span></div>'
+        + '<div><span class="font-label-sm text-label-sm text-primary">Domain:</span> <span class="font-body-sm text-body-sm text-on-surface-variant">' + esc(p.domain) + '</span></div>'
+        + '<div><span class="font-label-sm text-label-sm text-primary">Scope:</span> <span class="font-body-sm text-body-sm text-on-surface-variant">' + esc(p.scope) + '</span></div></div>'
+        + '<div class="mb-6"><h4 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wider">Key Impact</h4><ul class="space-y-2">'
+        + impactBullets.map(function(b) { return '<li class="font-body-sm text-body-sm text-on-surface-variant flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2"></span> ' + esc(b) + '</li>'; }).join('') + '</ul></div>'
+        + '<div class="mb-6"><h4 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-wider">Execution Focus</h4><ul class="space-y-2">'
+        + execBullets.map(function(b) { return '<li class="font-body-sm text-body-sm text-on-surface-variant flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2"></span> ' + esc(b) + '</li>'; }).join('') + '</ul></div>'
+        + '<div class="p-4 border border-white/10 bg-white/5 rounded-lg mb-6"><h5 class="font-label-sm text-label-sm text-primary mb-2 uppercase tracking-wider">Core Capability Signal</h5>'
+        + '<p class="font-body-sm text-body-sm text-on-surface-variant">' + esc(p.capabilitySignal) + '</p></div>'
+        + '<a href="#" data-deepdive="' + esc(p.deepDiveId) + '" class="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/30 font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-primary/20 transition-all no-underline w-fit">'
+        + '<span class="material-symbols-outlined text-[18px]">open_in_new</span> ' + esc(p.ctaText) + ' &rarr;</a></div>';
+
+      var imgCol = '<div class="flex flex-col">' + carouselHTML + '</div>';
+
+      return '<section class="col-span-12 grid grid-cols-12 gap-gutter"><div class="col-span-12 glass-panel p-6 md:p-12 relative overflow-hidden">'
+        + '<div class="flex justify-between items-center mb-6 relative z-10">'
+        + '<span class="bg-primary/15 text-primary border border-primary/30 font-label-sm text-label-sm px-4 py-1 rounded-full tracking-wider uppercase">' + esc(p.badge) + '</span>'
+        + '<span class="bg-white/5 text-on-surface-variant font-label-sm text-label-sm px-3 py-1 rounded border border-white/10 text-right">' + esc(tags.join(' \u00b7 ')) + '</span></div>'
+        + '<div class="flex items-center gap-4 mb-6 relative z-10">'
+        + '<div class="w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-fixed flex items-center justify-center text-on-primary font-bold text-xl shadow-lg shrink-0">'
+        + '<span class="material-symbols-outlined text-2xl" style="font-variation-settings:\'FILL\' 1;">' + esc(p.icon) + '</span></div>'
+        + '<div><h3 class="font-headline-lg text-headline-lg text-on-surface mb-1">' + esc(p.title) + '</h3><p class="font-label-sm text-label-sm text-on-surface-variant">' + esc(p.subtitle) + '</p></div></div>'
+        + '<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 relative z-10">'
+        + (imageRight ? textCol + imgCol : imgCol + textCol) + '</div></div></section>';
+    }
+
+    function renderDeepDiveContent(sections) {
+      var html = '';
+      for (var i = 0; i < sections.length; i++) {
+        var s = sections[i];
+        switch (s.sectionType) {
+          case 'text': html += '<div><h4 class="font-label-md text-label-md text-primary mb-3 uppercase tracking-wider flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> ' + esc(s.heading) + '</h4><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">' + esc(s.content) + '</p></div>'; break;
+          case 'quote': html += '<div class="p-4 border border-white/10 bg-white/5 rounded-lg"><p class="font-body-sm text-body-sm text-on-surface-variant italic text-primary/80">' + esc(s.content) + '</p></div>'; break;
+          case 'stats': html += statsBlock(s.heading, s.content); break;
+          case 'phaseCard': html += phaseBlock(s.heading, s.content); break;
+          case 'tagList': html += tagBlock(s.heading, s.content); break;
+          case 'bullets': html += '<div><h4 class="font-label-md text-label-md text-primary mb-3 uppercase tracking-wider flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> ' + esc(s.heading) + '</h4>' + renderHierBullets(s.content) + '</div>'; break;
+        }
+      }
+      return html;
+    }
+
+    function statsBlock(heading, content) {
+      var h = '<div><h4 class="font-label-md text-label-md text-primary mb-3 uppercase tracking-wider flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> ' + esc(heading) + '</h4>';
+      var pieces = content.split('|').map(function(s) { return s.trim(); }).filter(Boolean);
+      h += '<div class="flex flex-wrap gap-x-8 gap-y-2 mb-3">';
+      pieces.forEach(function(p) {
+        var ci = p.indexOf(':');
+        if (ci === -1) { h += '<div><span class="font-body-sm text-body-sm text-on-surface-variant">' + esc(p) + '</span></div>'; }
+        else { h += '<div><span class="font-label-sm text-label-sm text-primary">' + esc(p.substring(0, ci).trim()) + ':</span><span class="font-body-sm text-body-sm text-on-surface-variant"> ' + esc(p.substring(ci + 1).trim()) + '</span></div>'; }
+      });
+      h += '</div></div>';
+      return h;
+    }
+
+    function phaseBlock(heading, content) {
+      var h = '<div><h4 class="font-label-md text-label-md text-primary mb-3 uppercase tracking-wider flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> ' + esc(heading) + '</h4><div class="space-y-4">';
+      var phases = content.split('||').map(function(p) { return p.trim(); }).filter(Boolean);
+      phases.forEach(function(ph) {
+        var lines = ph.split('|').map(function(l) { return l.trim(); }).filter(Boolean);
+        h += '<div class="p-4 border border-white/10 bg-white/5 rounded-lg"><h5 class="font-label-sm text-label-sm text-primary mb-2">' + esc(lines[0] || '') + '</h5><ul class="space-y-1">';
+        for (var i = 1; i < lines.length; i++) { h += '<li class="font-body-sm text-body-sm text-on-surface-variant flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2"></span> ' + esc(lines[i]) + '</li>'; }
+        h += '</ul></div>';
+      });
+      h += '</div></div>';
+      return h;
+    }
+
+    function tagBlock(heading, content) {
+      var items = parseList(content);
+      var h = '<div><h4 class="font-label-md text-label-md text-primary mb-3 uppercase tracking-wider flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary"></span> ' + esc(heading) + '</h4><div class="flex flex-wrap gap-2">';
+      items.forEach(function(t) { h += '<span class="bg-white/5 text-on-surface-variant px-3 py-1 rounded-full text-label-sm font-label-sm">' + esc(t) + '</span>'; });
+      h += '</div></div>';
+      return h;
+    }
+
+    function renderHierBullets(content) {
+      var h = '';
+      if (content.indexOf('||') !== -1) {
+        var groups = content.split('||').map(function(g) { return g.trim(); }).filter(Boolean);
+        for (var gi = 0; gi < groups.length; gi++) {
+          var items = groups[gi].split('|').map(function(i) { return i.trim(); }).filter(Boolean);
+          h += '<ul class="space-y-2' + (gi < groups.length - 1 ? ' mb-3' : '') + '">';
+          if (items.length > 0) {
+            h += '<li class="font-body-sm text-body-sm text-on-surface-variant flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2"></span> ' + esc(items[0]) + '</li></ul>';
+            if (items.length > 1) {
+              h += '<ul class="space-y-1 ml-7' + (gi < groups.length - 1 ? ' mb-3' : '') + '">';
+              for (var ci = 1; ci < items.length; ci++) { h += '<li class="font-body-sm text-body-sm text-on-surface-variant flex items-start gap-2"><span class="w-2 h-0.5 bg-primary/60 shrink-0 mt-2.5"></span> ' + esc(items[ci]) + '</li>'; }
+              h += '</ul>';
+            }
+          }
+        }
+      } else {
+        var flat = content.split('|').map(function(i) { return i.trim(); }).filter(Boolean);
+        h += '<ul class="space-y-2">';
+        flat.forEach(function(f) { h += '<li class="font-body-sm text-body-sm text-on-surface-variant flex items-start gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2"></span> ' + esc(f) + '</li>'; });
+        h += '</ul>';
+      }
+      return h;
+    }
+
+    // ===== Tablet product card =====
+    function buildTabletProductHTML(p) {
+      var tags = parseList(p.tag);
+      var scopeTags = parseList(p.scopeTags);
+      var hasCta2 = p.cta2Text && p.cta2Text.trim();
+      var usePreview = p.ctaType === 'preview';
+      var cta2Preview = p.cta2Type === 'preview';
+
+      function tCtaBtn(text, link, type, preview, primary) {
+        var cls = primary
+          ? 'display:inline-flex;align-items:center;gap:0.5rem;background:rgba(78,222,163,0.1);color:#4be277;border:1px solid rgba(78,222,163,0.3);padding:0.625rem 1.5rem;border-radius:0.75rem;font-size:13px;font-weight:700;text-decoration:none;width:fit-content;'
+          : 'display:inline-flex;align-items:center;gap:0.375rem;background:transparent;color:#bccbb9;border:1px solid rgba(255,255,255,0.1);padding:0.5rem 1.25rem;border-radius:0.75rem;font-size:12px;font-weight:600;text-decoration:none;width:fit-content;';
+        var icon = '<span class="material-symbols-outlined" style="font-size:16px;">open_in_new</span>';
+        if (type === 'page') return '<a href="' + esc(link) + '" style="' + cls + '">' + icon + ' ' + esc(text) + '</a>';
+        if (preview) return '<a href="#" data-preview="' + esc(link) + '" style="' + cls + '">' + icon + ' ' + esc(text) + '</a>';
+        return '<a href="' + esc(link) + '" target="_blank" rel="noopener" style="' + cls + '">' + icon + ' ' + esc(text) + '</a>';
+      }
+
+      var html = '<div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:1rem;margin-bottom:1.5rem;overflow:hidden;">';
+      html += '<div style="padding:0.75rem 1.5rem 0;display:flex;justify-content:space-between;align-items:center;"><span style="background:rgba(78,222,163,0.15);color:#4be277;border:1px solid rgba(78,222,163,0.3);padding:0.25rem 0.75rem;border-radius:9999px;font-size:11px;text-transform:uppercase;">' + esc(p.badge) + '</span><span style="color:#bccbb9;font-size:11px;opacity:0.7;">' + esc(tags.join(' \u00b7 ')) + '</span></div>';
+      html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">';
+      html += '<div style="min-height:280px;overflow:hidden;"><img src="' + img(p.imagePath) + '" style="width:100%;height:100%;object-fit:contain;background:#0b1326;padding:0.75rem;" alt="' + esc(p.title) + '"/></div>';
+      html += '<div style="padding:1.5rem;display:flex;flex-direction:column;">';
+      html += '<h3 style="font-size:22px;font-weight:600;margin:0 0 0.25rem;color:#dae2fd;">' + esc(p.title) + '</h3>';
+      html += '<p style="color:#bccbb9;font-size:12px;text-transform:uppercase;margin-bottom:1rem;">' + esc(p.subtitle) + '</p>';
+      html += '<div style="overflow:hidden;transition:max-height 0.3s ease;max-height:0;" class="t-dd-' + esc(p.title).replace(/\s+/g,'-') + '">';
+      html += '<div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1rem;margin-top:0.5rem;">';
+      html += '<div style="margin-bottom:0.75rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.25rem;">Problem</h4><p style="color:#bccbb9;font-size:13px;">' + esc(p.problem) + '</p></div>';
+      html += '<div style="margin-bottom:0.75rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.25rem;">Insight</h4><p style="color:#bccbb9;font-size:13px;">' + esc(p.insight) + '</p></div>';
+      html += '<div style="margin-bottom:0.75rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.25rem;">Solution</h4><p style="color:#bccbb9;font-size:13px;">' + esc(p.solution) + '</p></div>';
+      html += '<div style="margin-bottom:1rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Product Scope</h4><div style="display:flex;flex-wrap:wrap;gap:0.5rem;">';
+      scopeTags.forEach(function(t) { html += '<span style="background:rgba(255,255,255,0.05);color:#bccbb9;padding:0.25rem 0.75rem;border-radius:0.5rem;font-size:10px;">' + esc(t) + '</span>'; });
+      html += '</div></div>';
+      html += '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;">' + tCtaBtn(p.ctaText, p.ctaLink, p.ctaType, usePreview, true);
+      if (hasCta2) html += tCtaBtn(p.cta2Text, p.cta2Link, p.cta2Type, cta2Preview, false);
+      html += '</div></div></div>';
+      html += '<button onclick="var c=this.parentElement.querySelector(\'[class*=t-dd-]\');c.style.maxHeight=c.style.maxHeight===\'0px\'?\'2000px\':\'0px\';this.querySelector(\'.t-btn-icon\').style.transform=c.style.maxHeight===\'0px\'?\'rotate(0deg)\':\'rotate(180deg)\';this.querySelector(\'.t-btn-text\').textContent=c.style.maxHeight===\'0px\'?\'Show Details\':\'Hide Details\';" style="margin-top:auto;width:100%;display:flex;align-items:center;justify-content:center;gap:0.5rem;background:rgba(255,255,255,0.05);color:#dae2fd;font-size:12px;font-weight:700;padding:0.75rem;border-radius:0.75rem;border:1px solid rgba(255,255,255,0.1);cursor:pointer;">';
+      html += '<span class="material-symbols-outlined t-btn-icon" style="font-size:18px;transition:transform 0.3s;">expand_more</span><span class="t-btn-text">Show Details</span></button>';
+      html += '</div></div></div>';
+      return html;
+    }
+
+    // ===== Mobile product card =====
+    function buildMobileProductHTML(p) {
+      var tags = parseList(p.tag);
+      var scopeTags = parseList(p.scopeTags);
+      var hasCta2 = p.cta2Text && p.cta2Text.trim();
+      var usePreview = p.ctaType === 'preview';
+      var cta2Preview = p.cta2Type === 'preview';
+
+      function mCtaBtn(text, link, type, preview, primary) {
+        var cls = primary
+          ? 'display:inline-flex;align-items:center;gap:0.5rem;background:rgba(78,222,163,0.1);color:#4be277;border:1px solid rgba(78,222,163,0.3);padding:0.5rem 1.25rem;border-radius:0.5rem;font-size:12px;font-weight:700;text-decoration:none;width:fit-content;'
+          : 'display:inline-flex;align-items:center;gap:0.375rem;background:transparent;color:#bccbb9;border:1px solid rgba(255,255,255,0.1);padding:0.375rem 1rem;border-radius:0.5rem;font-size:11px;font-weight:600;text-decoration:none;width:fit-content;';
+        var icon = '<span class="material-symbols-outlined" style="font-size:14px;">open_in_new</span>';
+        if (type === 'page') return '<a href="' + esc(link) + '" style="' + cls + '">' + icon + ' ' + esc(text) + '</a>';
+        if (preview) return '<a href="#" data-preview="' + esc(link) + '" style="' + cls + '">' + icon + ' ' + esc(text) + '</a>';
+        return '<a href="' + esc(link) + '" target="_blank" rel="noopener" style="' + cls + '">' + icon + ' ' + esc(text) + '</a>';
+      }
+
+      var html = '<div style="background:rgba(23,23,23,0.7);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:1rem;padding:1.25rem;margin-bottom:1rem;">';
+      html += '<div style="display:flex;justify-content:space-between;margin-bottom:1rem;"><span style="background:rgba(78,222,163,0.15);color:#4be277;border:1px solid rgba(78,222,163,0.3);padding:0.125rem 0.75rem;border-radius:9999px;font-size:10px;text-transform:uppercase;">' + esc(p.badge) + '</span><span style="color:#bccbb9;font-size:10px;opacity:0.7;">' + esc(tags.join(' \u00b7 ')) + '</span></div>';
+      html += '<div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;"><div style="width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,#4be277,#6bff8f);display:flex;align-items:center;justify-content:center;color:#003915;font-weight:700;font-size:14px;flex-shrink:0;">' + esc(getInitials(p.title)) + '</div><div><h3 style="font-size:18px;font-weight:600;color:#dae2fd;">' + esc(p.title) + '</h3><p style="color:#bccbb9;font-size:11px;text-transform:uppercase;">' + esc(p.subtitle) + '</p></div></div>';
+      html += '<div style="border-radius:0.75rem;overflow:hidden;margin-bottom:1rem;aspect-ratio:16/10;"><img src="' + img(p.imagePath) + '" style="width:100%;height:100%;object-fit:contain;background:#0e0e0e;" alt="' + esc(p.title) + '"/></div>';
+      html += '<div style="overflow:hidden;transition:max-height 0.3s ease;max-height:0;" class="m-dd-' + esc(p.title).replace(/\s+/g,'-') + '">';
+      html += '<div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1rem;margin-top:0.5rem;">';
+      html += '<div style="margin-bottom:0.75rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.25rem;">Problem</h4><p style="color:#bccbb9;font-size:13px;">' + esc(p.problem) + '</p></div>';
+      html += '<div style="margin-bottom:0.75rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.25rem;">Insight</h4><p style="color:#bccbb9;font-size:13px;">' + esc(p.insight) + '</p></div>';
+      html += '<div style="margin-bottom:0.75rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.25rem;">Solution</h4><p style="color:#bccbb9;font-size:13px;">' + esc(p.solution) + '</p></div>';
+      html += '<div style="margin-bottom:1rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Product Scope</h4><div style="display:flex;flex-wrap:wrap;gap:0.5rem;">';
+      scopeTags.forEach(function(t) { html += '<span style="background:rgba(255,255,255,0.05);color:#bccbb9;padding:0.25rem 0.75rem;border-radius:0.5rem;font-size:10px;">' + esc(t) + '</span>'; });
+      html += '</div></div>';
+      html += '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;">' + mCtaBtn(p.ctaText, p.ctaLink, p.ctaType, usePreview, true);
+      if (hasCta2) html += mCtaBtn(p.cta2Text, p.cta2Link, p.cta2Type, cta2Preview, false);
+      html += '</div></div></div>';
+      html += '<button onclick="var c=this.parentElement.querySelector(\'[class*=m-dd-]\');c.style.maxHeight=c.style.maxHeight===\'0px\'?\'2000px\':\'0px\';this.querySelector(\'.m-btn-icon\').style.transform=c.style.maxHeight===\'0px\'?\'rotate(0deg)\':\'rotate(180deg)\';this.querySelector(\'.m-btn-text\').textContent=c.style.maxHeight===\'0px\'?\'View Details\':\'Collapse\';" style="width:100%;display:flex;align-items:center;justify-content:center;gap:0.5rem;background:rgba(255,255,255,0.05);color:#dae2fd;font-size:12px;font-weight:700;padding:0.75rem;border-radius:0.75rem;border:1px solid rgba(255,255,255,0.1);margin-top:0.5rem;cursor:pointer;">';
+      html += '<span class="material-symbols-outlined m-btn-icon" style="font-size:18px;transition:transform 0.3s;">expand_more</span><span class="m-btn-text">View Details</span></button>';
+      html += '</div>';
+      return html;
+    }
+
+    // ===== Tablet project card =====
+    function buildTabletProjectHTML(p) {
+      var tags = parseList(p.tag);
+      var impactBullets = parseList(p.impactBullets);
+      var execBullets = parseList(p.executionBullets);
+      var imgCount = parseInt(p.imageCount) || 1;
+
+      var html = '<div style="background:rgba(30,41,59,0.7);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:1rem;margin-bottom:1.5rem;overflow:hidden;">';
+      html += '<div style="padding:0.75rem 1.5rem 0;display:flex;justify-content:space-between;align-items:center;"><span style="background:rgba(78,222,163,0.15);color:#4be277;border:1px solid rgba(78,222,163,0.3);padding:0.25rem 0.75rem;border-radius:9999px;font-size:11px;text-transform:uppercase;">' + esc(p.badge) + '</span><span style="color:#bccbb9;font-size:11px;opacity:0.7;">' + esc(tags.join(' \u00b7 ')) + '</span></div>';
+      html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">';
+      html += '<div style="min-height:280px;overflow:hidden;background:#0b1326;"><div style="position:relative;width:100%;height:100%;" class="t-carousel"><div class="t-carousel-track" style="display:flex;height:100%;transition:transform 0.5s ease-in-out;">';
+      for (var i = 1; i <= imgCount; i++) {
+        html += '<img class="t-carousel-slide" src="' + img(p.imageDir) + i + '.jpg" style="min-width:100%;height:100%;object-fit:contain;padding:0.75rem;flex-shrink:0;" alt="' + esc(p.title) + ' ' + i + '"/>';
+      }
+      html += '</div></div></div>';
+      html += '<div style="padding:1.5rem;display:flex;flex-direction:column;">';
+      html += '<div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;"><div style="width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,#4be277,#6bff8f);display:flex;align-items:center;justify-content:center;color:#003915;font-weight:700;font-size:14px;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:18px;">' + esc(p.icon) + '</span></div><div><h3 style="font-size:20px;font-weight:600;color:#dae2fd;">' + esc(p.title) + '</h3><p style="color:#bccbb9;font-size:11px;">' + esc(p.subtitle) + '</p></div></div>';
+      html += '<p style="color:#bccbb9;font-size:13px;margin-bottom:0.75rem;">' + esc(p.intro) + '</p>';
+      html += '<div style="overflow:hidden;transition:max-height 0.3s ease;max-height:0;" class="t-pj-dd-' + esc(p.title).replace(/\s+/g,'-') + '">';
+      html += '<div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:0.75rem;margin-top:0.5rem;">';
+      html += '<div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.75rem;padding:0.5rem 0.75rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:0.5rem;"><span style="color:#4be277;font-size:11px;font-weight:600;">Role:</span><span style="color:#bccbb9;font-size:12px;">' + esc(p.role) + '</span><span style="color:#4be277;font-size:11px;font-weight:600;margin-left:1rem;">Domain:</span><span style="color:#bccbb9;font-size:12px;">' + esc(p.domain) + '</span><span style="color:#4be277;font-size:11px;font-weight:600;margin-left:1rem;">Scope:</span><span style="color:#bccbb9;font-size:12px;">' + esc(p.scope) + '</span></div>';
+      html += '<div style="margin-bottom:0.75rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.375rem;">Key Impact</h4><ul style="margin:0;padding-left:1rem;">';
+      impactBullets.forEach(function(b) { html += '<li style="color:#bccbb9;font-size:12px;margin-bottom:0.25rem;">' + esc(b) + '</li>'; });
+      html += '</ul></div>';
+      html += '<div style="margin-bottom:0.75rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.375rem;">Execution Focus</h4><ul style="margin:0;padding-left:1rem;">';
+      execBullets.forEach(function(b) { html += '<li style="color:#bccbb9;font-size:12px;margin-bottom:0.25rem;">' + esc(b) + '</li>'; });
+      html += '</ul></div>';
+      html += '<a href="#" data-deepdive="' + esc(p.deepDiveId) + '" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(78,222,163,0.1);color:#4be277;border:1px solid rgba(78,222,163,0.3);padding:0.5rem 1.25rem;border-radius:0.5rem;font-size:12px;font-weight:700;text-decoration:none;width:fit-content;"><span class="material-symbols-outlined" style="font-size:14px;">open_in_new</span> Deep Dive &rarr;</a>';
+      html += '</div></div>';
+      html += '<button onclick="var c=this.parentElement.querySelector(\'[class*=t-pj-dd-]\');c.style.maxHeight=c.style.maxHeight===\'0px\'?\'2000px\':\'0px\';this.querySelector(\'.t-pj-btn-icon\').style.transform=c.style.maxHeight===\'0px\'?\'rotate(0deg)\':\'rotate(180deg)\';this.querySelector(\'.t-pj-btn-text\').textContent=c.style.maxHeight===\'0px\'?\'Show Details\':\'Hide Details\';" style="margin-top:auto;width:100%;display:flex;align-items:center;justify-content:center;gap:0.5rem;background:rgba(255,255,255,0.05);color:#dae2fd;font-size:12px;font-weight:700;padding:0.75rem;border-radius:0.75rem;border:1px solid rgba(255,255,255,0.1);cursor:pointer;">';
+      html += '<span class="material-symbols-outlined t-pj-btn-icon" style="font-size:18px;transition:transform 0.3s;">expand_more</span><span class="t-pj-btn-text">Show Details</span></button>';
+      html += '</div></div></div>';
+      return html;
+    }
+
+    // ===== Mobile project card =====
+    function buildMobileProjectHTML(p) {
+      var tags = parseList(p.tag);
+      var impactBullets = parseList(p.impactBullets);
+      var execBullets = parseList(p.executionBullets);
+      var imgCount = parseInt(p.imageCount) || 1;
+
+      var html = '<div style="background:rgba(23,23,23,0.7);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:1rem;padding:1.25rem;margin-bottom:1rem;">';
+      html += '<div style="display:flex;justify-content:space-between;margin-bottom:0.75rem;"><span style="background:rgba(78,222,163,0.15);color:#4be277;border:1px solid rgba(78,222,163,0.3);padding:0.125rem 0.75rem;border-radius:9999px;font-size:10px;text-transform:uppercase;">' + esc(p.badge) + '</span><span style="color:#bccbb9;font-size:10px;opacity:0.7;">' + esc(tags.join(' \u00b7 ')) + '</span></div>';
+      html += '<div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;"><div style="width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,#4be277,#6bff8f);display:flex;align-items:center;justify-content:center;color:#003915;font-weight:700;font-size:14px;flex-shrink:0;"><span class="material-symbols-outlined" style="font-size:18px;">' + esc(p.icon) + '</span></div><div><h3 style="font-size:18px;font-weight:600;color:#dae2fd;">' + esc(p.title) + '</h3><p style="color:#bccbb9;font-size:11px;">' + esc(p.subtitle) + '</p></div></div>';
+      html += '<p style="color:#bccbb9;font-size:13px;margin-bottom:0.75rem;">' + esc(p.intro) + '</p>';
+      html += '<div style="border-radius:0.5rem;overflow:hidden;margin-bottom:0.75rem;aspect-ratio:16/10;background:#0b1326;"><img src="' + img(p.imageDir) + '1.jpg" style="width:100%;height:100%;object-fit:contain;padding:0.5rem;" alt="' + esc(p.title) + '"/></div>';
+      html += '<div style="overflow:hidden;transition:max-height 0.3s ease;max-height:0;" class="m-pj-dd-' + esc(p.title).replace(/\s+/g,'-') + '">';
+      html += '<div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:0.75rem;margin-top:0.5rem;">';
+      html += '<div style="margin-bottom:0.75rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.375rem;">Key Impact</h4><ul style="margin:0;padding-left:1rem;">';
+      impactBullets.forEach(function(b) { html += '<li style="color:#bccbb9;font-size:12px;margin-bottom:0.25rem;">' + esc(b) + '</li>'; });
+      html += '</ul></div>';
+      html += '<div style="margin-bottom:0.75rem;"><h4 style="color:#4be277;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.375rem;">Execution Focus</h4><ul style="margin:0;padding-left:1rem;">';
+      execBullets.forEach(function(b) { html += '<li style="color:#bccbb9;font-size:12px;margin-bottom:0.25rem;">' + esc(b) + '</li>'; });
+      html += '</ul></div>';
+      html += '<a href="#" data-deepdive="' + esc(p.deepDiveId) + '" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(78,222,163,0.1);color:#4be277;border:1px solid rgba(78,222,163,0.3);padding:0.5rem 1.25rem;border-radius:0.5rem;font-size:12px;font-weight:700;text-decoration:none;width:fit-content;"><span class="material-symbols-outlined" style="font-size:14px;">open_in_new</span> Deep Dive &rarr;</a>';
+      html += '</div></div>';
+      html += '<button onclick="var c=this.parentElement.querySelector(\'[class*=m-pj-dd-]\');c.style.maxHeight=c.style.maxHeight===\'0px\'?\'2000px\':\'0px\';this.querySelector(\'.m-pj-btn-icon\').style.transform=c.style.maxHeight===\'0px\'?\'rotate(0deg)\':\'rotate(180deg)\';this.querySelector(\'.m-pj-btn-text\').textContent=c.style.maxHeight===\'0px\'?\'View Details\':\'Collapse\';" style="width:100%;display:flex;align-items:center;justify-content:center;gap:0.5rem;background:rgba(255,255,255,0.05);color:#dae2fd;font-size:12px;font-weight:700;padding:0.75rem;border-radius:0.75rem;border:1px solid rgba(255,255,255,0.1);margin-top:0.5rem;cursor:pointer;">';
+      html += '<span class="material-symbols-outlined m-pj-btn-icon" style="font-size:18px;transition:transform 0.3s;">expand_more</span><span class="m-pj-btn-text">View Details</span></button>';
+      html += '</div>';
+      return html;
+    }
+
+    // ===== Skeleton =====
+    document.getElementById('product-content').innerHTML = buildSkeletonCards(4, false);
+    document.getElementById('project-content').innerHTML = buildSkeletonCards(2, true);
+    var pt = document.getElementById('product-content-tablet');
+    var pm = document.getElementById('product-content-mobile');
+    var pjt = document.getElementById('project-content-tablet');
+    var pjm = document.getElementById('project-content-mobile');
+    if (pt) pt.innerHTML = buildSkeletonCards(2, false);
+    if (pm) pm.innerHTML = '<p style="color:#bccbb9;text-align:center;padding:2rem;">Loading...</p>';
+    if (pjt) pjt.innerHTML = buildSkeletonCards(1, true);
+    if (pjm) pjm.innerHTML = '<p style="color:#bccbb9;text-align:center;padding:2rem;">Loading...</p>';
+
+    try {
+      var results = await Promise.all([
+        fetchTab(SHEET_GIDS.products),
+        fetchTab(SHEET_GIDS.projects),
+        fetchTab(SHEET_GIDS.deepDive)
+      ]);
+      var rawProducts = results[0];
+      var rawProjects = results[1];
+      var rawDeepDives = results[2];
+
+      var products = sortByOrder(rawProducts.filter(function(p) { return p.title && p.title.trim(); }));
+      var projects = sortByOrder(rawProjects.filter(function(p) { return p.title && p.title.trim(); }));
+
+      // Desktop render
+      document.getElementById('product-content').innerHTML = products.length ? products.map(buildProductHTML).join('') : '<div class="col-span-12 text-center py-16"><p class="font-body-lg text-body-lg text-on-surface-variant">No products to display yet.</p></div>';
+      document.getElementById('project-content').innerHTML = projects.length ? projects.map(buildProjectHTML).join('') : '<div class="col-span-12 text-center py-16"><p class="font-body-lg text-body-lg text-on-surface-variant">No projects to display yet.</p></div>';
+
+      // Tablet render
+      if (pt) pt.innerHTML = products.length ? products.map(buildTabletProductHTML).join('') : '<p style="text-align:center;color:#bccbb9;padding:2rem;">No products yet.</p>';
+      if (pjt) pjt.innerHTML = projects.length ? projects.map(buildTabletProjectHTML).join('') : '<p style="text-align:center;color:#bccbb9;padding:2rem;">No projects yet.</p>';
+
+      // Mobile render
+      if (pm) pm.innerHTML = products.length ? products.map(buildMobileProductHTML).join('') : '<p style="text-align:center;color:#bccbb9;padding:2rem;">No products yet.</p>';
+      if (pjm) pjm.innerHTML = projects.length ? projects.map(buildMobileProjectHTML).join('') : '<p style="text-align:center;color:#bccbb9;padding:2rem;">No projects yet.</p>';
+
+      // ===== Tabs (desktop) =====
+      (function() {
+        var productBtn = document.getElementById('tab-product');
+        var projectBtn = document.getElementById('tab-project');
+        var productContent = document.getElementById('product-content');
+        var projectContent = document.getElementById('project-content');
+        if (!productBtn) return;
+        function cls(tab) {
+          var base = 'px-4 md:px-8 py-3 md:py-4 font-label-sm md:font-label-md text-label-sm md:text-label-md whitespace-nowrap transition-all no-underline';
+          if (tab === 'product') {
+            productBtn.className = base + ' text-primary border-b-2 border-primary bg-white/5';
+            projectBtn.className = base + ' text-on-surface-variant hover:text-on-surface hover:bg-white/5';
+            productContent.style.display = ''; projectContent.style.display = 'none';
+          } else {
+            projectBtn.className = base + ' text-primary border-b-2 border-primary bg-white/5';
+            productBtn.className = base + ' text-on-surface-variant hover:text-on-surface hover:bg-white/5';
+            projectContent.style.display = ''; productContent.style.display = 'none';
+          }
+        }
+        productBtn.addEventListener('click', function() { cls('product'); });
+        projectBtn.addEventListener('click', function() { cls('project'); });
+      })();
+
+      // ===== Tabs (tablet) =====
+      (function() {
+        var pb = document.getElementById('tab-product-t');
+        var pj = document.getElementById('tab-project-t');
+        var pc = document.getElementById('product-content-tablet');
+        var jc = document.getElementById('project-content-tablet');
+        if (!pb || !pc) return;
+        pb.addEventListener('click', function() {
+          pb.style.color = '#4be277'; pb.style.borderBottom = '2px solid #4be277'; pb.style.background = 'rgba(255,255,255,0.05)';
+          pj.style.color = '#bccbb9'; pj.style.borderBottom = 'none'; pj.style.background = 'transparent';
+          pc.style.display = ''; jc.style.display = 'none';
+        });
+        pj.addEventListener('click', function() {
+          pj.style.color = '#4be277'; pj.style.borderBottom = '2px solid #4be277'; pj.style.background = 'rgba(255,255,255,0.05)';
+          pb.style.color = '#bccbb9'; pb.style.borderBottom = 'none'; pb.style.background = 'transparent';
+          jc.style.display = ''; pc.style.display = 'none';
+        });
+      })();
+
+      // ===== Tabs (mobile) =====
+      (function() {
+        var pb = document.getElementById('tab-product-m');
+        var pj = document.getElementById('tab-project-m');
+        var pc = document.getElementById('product-content-mobile');
+        var jc = document.getElementById('project-content-mobile');
+        if (!pb || !pc) return;
+        pb.addEventListener('click', function() {
+          pb.style.color = '#4be277'; pb.style.borderBottom = '2px solid #4be277'; pb.style.background = 'rgba(255,255,255,0.05)';
+          pj.style.color = '#bccbb9'; pj.style.borderBottom = 'none'; pj.style.background = 'transparent';
+          pc.style.display = ''; jc.style.display = 'none';
+        });
+        pj.addEventListener('click', function() {
+          pj.style.color = '#4be277'; pj.style.borderBottom = '2px solid #4be277'; pj.style.background = 'rgba(255,255,255,0.05)';
+          pb.style.color = '#bccbb9'; pb.style.borderBottom = 'none'; pb.style.background = 'transparent';
+          jc.style.display = ''; pc.style.display = 'none';
+        });
+      })();
+
+      // ===== Preview links (open in new tab) =====
+      (function() {
+        document.querySelectorAll('[data-preview]').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open(this.getAttribute('data-preview'), '_blank', 'noopener');
+          });
+        });
+      })();
+
+      // ===== Deep Dive Overlay =====
+      (function() {
+        var ddOverlay = document.getElementById('deepdive-overlay');
+        var ddClose = document.getElementById('deepdive-close');
+        var ddTitle = document.getElementById('deepdive-title');
+        var ddSubtitle = document.getElementById('deepdive-subtitle');
+        var ddBody = document.getElementById('deepdive-body');
+        if (!ddOverlay) return;
+        document.querySelectorAll('[data-deepdive]').forEach(function(btn) {
+          btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            var projectId = this.getAttribute('data-deepdive');
+            var proj = null;
+            for (var pi = 0; pi < projects.length; pi++) { if (projects[pi].deepDiveId === projectId) { proj = projects[pi]; break; } }
+            if (!proj) return;
+            ddTitle.textContent = proj.title;
+            ddSubtitle.textContent = proj.subtitle || '';
+            var sections = [];
+            for (var si = 0; si < rawDeepDives.length; si++) { if (rawDeepDives[si].projectId === projectId) sections.push(rawDeepDives[si]); }
+            sections.sort(function(a, b) { return (parseInt(a.sectionOrder) || 0) - (parseInt(b.sectionOrder) || 0); });
+            ddBody.innerHTML = renderDeepDiveContent(sections);
+            ddOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          });
+        });
+        function closeDeepDive() { ddOverlay.classList.add('hidden'); document.body.style.overflow = ''; }
+        ddClose.addEventListener('click', closeDeepDive);
+        ddOverlay.addEventListener('click', function(e) {
+          if (e.target === ddOverlay || e.target.id === 'deepdive-backdrop') closeDeepDive();
+        });
+      })();
+
+      // ===== Carousels =====
+      document.querySelectorAll('.carousel').forEach(function(el) {
+        var track = el.querySelector('.carousel-track');
+        var prev = el.querySelector('.carousel-prev');
+        var next = el.querySelector('.carousel-next');
+        var dots = el.querySelectorAll('.carousel-dots span');
+        var idx = 0, total = track.children.length, interval;
+        function update() {
+          track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+          dots.forEach(function(d, i) { d.classList.toggle('bg-white/80', i === idx); d.classList.toggle('bg-white/30', i !== idx); });
+        }
+        function startAuto() { stopAuto(); interval = setInterval(function() { idx = (idx + 1) % total; update(); }, 4000); }
+        function stopAuto() { clearInterval(interval); }
+        if (prev) prev.addEventListener('click', function(e) { e.stopPropagation(); idx = (idx - 1 + total) % total; update(); startAuto(); });
+        if (next) next.addEventListener('click', function(e) { e.stopPropagation(); idx = (idx + 1) % total; update(); startAuto(); });
+        el.addEventListener('mouseenter', stopAuto); el.addEventListener('mouseleave', startAuto);
+        startAuto();
+      });
+
+    } catch (err) {
+      var msg = '<div style="text-align:center;padding:2rem;"><p style="color:#bccbb9;">Failed to load portfolio data.</p></div>';
+      document.getElementById('product-content').innerHTML = msg;
+      document.getElementById('project-content').innerHTML = '';
+      if (pt) pt.innerHTML = msg;
+      if (pm) pm.innerHTML = msg;
+      if (pjt) pjt.innerHTML = msg;
+      if (pjm) pjm.innerHTML = msg;
+      console.error(err);
+    }
+  });
+  </script>
+</body>
+</html>

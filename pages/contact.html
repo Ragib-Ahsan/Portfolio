@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Contact | Ragib Ahsan</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../shared/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="../shared/styles.css" rel="stylesheet"/>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary" data-page="contact" data-page-in-pages>
+
+  <!-- ===== DESKTOP FACE ===== -->
+  <div class="viewport-desktop">
+    <div id="nav-desktop"></div>
+
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+
+      <section id="d-contact-hero" class="mb-16 md:mb-24 max-w-4xl">
+        <h1 class="font-headline-xl text-headline-xl mb-6 text-on-surface tracking-tighter">
+          Exploring the intersection of systems, technology, and execution.
+        </h1>
+        <div class="w-24 h-1 bg-primary mb-8"></div>
+        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-3xl">
+          I&rsquo;m interested in complex products and operational systems across fintech, healthcare, mobility, and engineering domains. My focus is structured problem solving, system design, and execution-oriented product thinking.
+        </p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant/50 mt-6 italic">
+          Open to product roles, collaborations, and system-level discussions.
+        </p>
+      </section>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-16 md:mb-24">
+        <aside id="d-contact-sidebar" class="md:col-span-4 flex flex-col gap-gutter">
+          <div class="glass-surface p-6 md:p-8 rounded-xl flex flex-col gap-6">
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span>
+              <div>
+                <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-1">Location</p>
+                <p class="font-body-md text-body-md text-white">Dhaka, Bangladesh</p>
+              </div>
+            </div>
+            <div class="w-full h-px bg-white/5"></div>
+            <div>
+              <p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-3">Direct</p>
+              <div class="flex flex-col gap-3">
+                <a class="group flex items-center gap-3 no-underline" href="mailto:ragib.ahsan.me@gmail.com">
+                  <span class="material-symbols-outlined text-primary text-xl">mail</span>
+                  <span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">ragib.ahsan.me@gmail.com</span>
+                </a>
+                <a class="group flex items-center gap-3 no-underline" href="https://www.linkedin.com/in/ragib-ahsan-b39429190" target="_blank" rel="noopener">
+                  <span class="text-primary font-bold text-sm w-5 h-5 flex items-center justify-center rounded bg-primary/10">in</span>
+                  <span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">LinkedIn: Ragib Ahsan</span>
+                </a>
+                <a class="group flex items-center gap-3 no-underline" href="tel:+8804841509542">
+                  <span class="material-symbols-outlined text-primary text-xl">call</span>
+                  <span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">+8804841509542</span>
+                </a>
+              </div>
+            </div>
+            <div class="w-full h-px bg-white/5"></div>
+            <div class="flex items-start gap-3">
+              <span class="text-lg mt-0.5">🟢</span>
+              <div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Currently open to:</p>
+                <ul class="mt-1 space-y-1">
+                  <li class="font-body-sm text-body-sm text-on-surface-variant/70">Product opportunities</li>
+                  <li class="font-body-sm text-body-sm text-on-surface-variant/70">System design discussions</li>
+                  <li class="font-body-sm text-body-sm text-on-surface-variant/70">Collaboration on meaningful projects</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <section id="d-contact-form" class="md:col-span-8 glass-panel hairline-border rounded-xl p-8 md:p-10 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+          <h2 class="font-headline-lg text-headline-lg text-white mb-3">Start a Conversation</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+            Share your idea, product, or collaboration opportunity. I typically respond within a short timeframe.
+          </p>
+          <form action="https://formspree.io/f/xpqnzpra" method="POST" class="space-y-5">
+            <div class="space-y-2">
+              <label class="font-label-md text-label-md text-on-surface-variant block" for="name">Name</label>
+              <input class="w-full bg-surface-container-lowest hairline-border rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/30 focus:outline-none focus:ring-1 focus:ring-primary transition-all" id="name" name="name" placeholder="Your name" type="text" required/>
+            </div>
+            <div class="space-y-2">
+              <label class="font-label-md text-label-md text-on-surface-variant block" for="email">Email</label>
+              <input class="w-full bg-surface-container-lowest hairline-border rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/30 focus:outline-none focus:ring-1 focus:ring-primary transition-all" id="email" name="email" placeholder="your@email.com" type="email" required/>
+            </div>
+            <div class="space-y-2">
+              <label class="font-label-md text-label-md text-on-surface-variant block" for="message">Message</label>
+              <textarea class="w-full bg-surface-container-lowest hairline-border rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/30 focus:outline-none focus:ring-1 focus:ring-primary transition-all resize-none" id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+            </div>
+            <button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-3 rounded-lg hover:bg-primary-fixed transition-all flex items-center gap-2" type="submit">
+              Send Message
+              <span class="material-symbols-outlined text-[18px]">send</span>
+            </button>
+          </form>
+        </section>
+      </div>
+
+      <section id="d-contact-calendly" class="glass-surface rounded-xl p-8 md:p-10 text-center max-w-3xl mx-auto mb-16 md:mb-24">
+        <h2 class="font-headline-lg text-headline-lg text-white mb-3">Prefer a Live Discussion?</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+          Schedule a structured conversation via Google Meet for deeper product or system discussions.
+        </p>
+        <button onclick="toggleCalendly(this)" class="inline-flex items-center gap-2 bg-primary text-on-primary font-label-md text-label-md px-8 py-3 rounded-lg hover:bg-primary-fixed transition-all cursor-pointer">
+          Schedule a Live Discussion
+          <span class="material-symbols-outlined text-[18px] transition-transform duration-300" id="calendly-icon">expand_more</span>
+        </button>
+        <p class="font-body-sm text-body-sm text-on-surface-variant/40 mt-4 italic">
+          Please include context when booking to make the conversation more effective.
+        </p>
+        <div id="calendly-embed" class="hidden mt-8 overflow-hidden rounded-xl" style="max-height: 0;">
+          <iframe src="https://calendly.com/ragib-ahsan-me/30min?hide_gdpr_banner=1" width="100%" height="700" frameborder="0" class="rounded-xl"></iframe>
+        </div>
+      </section>
+
+      <section id="d-contact-closing" class="max-w-3xl mx-auto text-center mb-8">
+        <p class="font-headline-md text-headline-md text-primary-fixed italic">
+          The value of a system is defined by how reliably it executes in the real world.
+        </p>
+      </section>
+      <div class="max-w-3xl mx-auto text-center mb-8">
+        <p class="font-body-lg text-body-lg text-on-surface-variant/60">
+          If you&rsquo;re building something complex, we should talk.
+        </p>
+      </div>
+
+    </main>
+
+    <div id="site-footer"></div>
+  </div>
+
+  <!-- ===== TABLET FACE ===== -->
+  <div class="viewport-tablet">
+    <div id="nav-tablet"></div>
+
+    <main style="padding-top:5rem;padding-bottom:4rem;max-width:1280px;margin:0 auto;padding-left:2rem;padding-right:2rem;">
+      <section data-sync="d-contact-hero" style="margin-bottom:2rem;"></section>
+
+      <div style="display:grid;grid-template-columns:5fr 7fr;gap:1.5rem;margin-bottom:3rem;">
+        <aside data-sync="d-contact-sidebar"></aside>
+        <section data-sync="d-contact-form"></section>
+      </div>
+
+      <section data-sync="d-contact-calendly" style="margin-bottom:3rem;"></section>
+      <section data-sync="d-contact-closing" style="margin-bottom:2rem;"></section>
+    </main>
+
+    <div id="site-footer"></div>
+  </div>
+
+  <!-- ===== MOBILE FACE ===== -->
+  <div class="viewport-mobile">
+    <div class="reading-progress" id="reading-progress">
+      <div class="reading-progress-bar" id="reading-progress-bar"></div>
+    </div>
+
+    <div id="nav-mobile"></div>
+
+    <main style="padding-top:5rem;padding-bottom:5rem;padding-left:1rem;padding-right:1rem;">
+      <section data-sync="d-contact-hero" style="margin-bottom:1.5rem;"></section>
+      <aside data-sync="d-contact-sidebar" style="margin-bottom:1.5rem;"></aside>
+      <section data-sync="d-contact-form" style="margin-bottom:2rem;"></section>
+      <section data-sync="d-contact-calendly" style="margin-bottom:2rem;"></section>
+      <section data-sync="d-contact-closing" style="margin-bottom:2rem;"></section>
+    </main>
+  </div>
+
+  <script src="../shared/nav-data.js"></script>
+  <script src="../shared/content-sync.js"></script>
+  <script src="../shared/load-components.js"></script>
+  <script>
+    function toggleCalendly(btn) {
+      var section = btn.closest('[data-sync]') || btn.parentElement;
+      while (section && section.id !== 'd-contact-calendly' && !section.hasAttribute('data-sync')) {
+        section = section.parentElement;
+      }
+      var embed = (section || document).querySelector('#calendly-embed');
+      var icon = btn.querySelector('#calendly-icon');
+      if (!embed) return;
+      var isHidden = embed.classList.contains('hidden');
+      if (isHidden) {
+        embed.classList.remove('hidden');
+        embed.style.maxHeight = embed.scrollHeight + 'px';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        embed.style.maxHeight = '0';
+        if (icon) icon.style.transform = 'rotate(0deg)';
+        setTimeout(function() { embed.classList.add('hidden'); }, 300);
+      }
+    }
+  </script>
+</body>
+</html>

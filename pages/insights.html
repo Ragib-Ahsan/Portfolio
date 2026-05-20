@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Insights | Ragib Ahsan</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="../shared/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="../shared/styles.css" rel="stylesheet"/>
+  <style>
+    @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+    .skeleton { background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed" data-page="insights" data-page-in-pages>
+
+  <!-- ===== DESKTOP FACE ===== -->
+  <div class="viewport-desktop">
+    <div id="nav-desktop"></div>
+
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16">
+      <header class="max-w-3xl mb-16 md:mb-24">
+        <h1 class="font-headline-xl text-headline-xl mb-6 text-white leading-tight">
+          Product Insights &amp; <br/>Executive Strategy
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">
+          A collection of my thoughts on product behavior, execution systems, and real-world product challenges.
+        </p>
+      </header>
+
+      <div id="insights-grid" class="grid grid-cols-12 gap-gutter"></div>
+
+      <section class="mt-16 md:mt-24 glass-panel hairline-border rounded-xl p-8 md:p-12 text-center max-w-4xl mx-auto relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+        <h2 class="font-headline-lg text-headline-lg text-white mb-4">Patterns. Systems. Execution.</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-lg mx-auto leading-relaxed">
+          A continuously evolving collection of observations on product behavior, operational complexity, and digital ecosystems.
+        </p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant/70 mb-10 max-w-md mx-auto italic">
+          Built through experimentation, research, and real-world execution.
+        </p>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+          <a href="https://www.linkedin.com/in/ragib-ahsan-b39429190" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/30 font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-primary/20 transition-all no-underline">
+            <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+            Let's get connected!
+          </a>
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-transparent text-on-surface-variant border border-white/10 font-label-md text-label-md px-6 py-3 rounded-lg hover:bg-white/5 hover:text-on-surface transition-all no-underline">
+            <span class="material-symbols-outlined text-[18px]">mail</span>
+            Contact me
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+  </div>
+
+  <!-- ===== TABLET FACE ===== -->
+  <div class="viewport-tablet">
+    <div id="nav-tablet"></div>
+
+    <main style="padding-top:5rem;padding-bottom:4rem;max-width:1280px;margin:0 auto;padding-left:2rem;padding-right:2rem;">
+      <header style="margin-bottom:2rem;">
+        <h1 style="font-size:36px;font-weight:600;color:#dae2fd;letter-spacing:-0.02em;margin-bottom:0.75rem;">Product Insights &amp; Strategy</h1>
+        <p style="color:#bccbb9;font-size:16px;max-width:36rem;">Thoughts on product behavior, execution systems, and real-world product challenges.</p>
+      </header>
+
+      <div id="insights-grid-tablet" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;"></div>
+
+      <section style="margin-top:3rem;text-align:center;padding:2.5rem;background:rgba(30,41,59,0.7);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:1rem;">
+        <h2 style="font-size:24px;font-weight:600;color:#dae2fd;margin-bottom:1rem;">Patterns. Systems. Execution.</h2>
+        <p style="color:#bccbb9;font-size:14px;margin-bottom:2rem;">Built through experimentation, research, and real-world execution.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;">
+          <a href="https://www.linkedin.com/in/ragib-ahsan-b39429190" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.5rem;color:#4be277;border:1px solid rgba(78,222,163,0.3);padding:0.75rem 2rem;border-radius:0.75rem;font-size:14px;font-weight:700;text-decoration:none;background:rgba(78,222,163,0.1);">Let's get connected!</a>
+          <a href="contact.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:#bccbb9;border:1px solid rgba(255,255,255,0.1);padding:0.75rem 2rem;border-radius:0.75rem;font-size:14px;font-weight:700;text-decoration:none;">Contact me</a>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+  </div>
+
+  <!-- ===== MOBILE FACE ===== -->
+  <div class="viewport-mobile">
+    <div class="reading-progress" id="reading-progress">
+      <div class="reading-progress-bar" id="reading-progress-bar"></div>
+    </div>
+
+    <div id="nav-mobile"></div>
+
+    <main style="padding-top:5rem;padding-bottom:5rem;padding-left:1rem;padding-right:1rem;">
+      <h1 style="font-size:28px;font-weight:600;color:#dae2fd;margin-bottom:0.25rem;">Product Insights</h1>
+      <p style="color:#bccbb9;font-size:13px;margin-bottom:1.5rem;">Thoughts on product behavior and execution.</p>
+
+      <div id="insights-grid-mobile" style="display:flex;flex-direction:column;gap:1rem;"></div>
+
+      <section style="margin-top:2rem;text-align:center;padding:1.5rem;background:rgba(30,41,59,0.7);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:1rem;">
+        <p style="color:#bccbb9;font-size:13px;margin-bottom:1.5rem;">Built through experimentation, research, and real-world execution.</p>
+        <a href="https://www.linkedin.com/in/ragib-ahsan-b39429190" target="_blank" rel="noopener" style="display:block;color:#4be277;border:1px solid rgba(78,222,163,0.3);padding:0.75rem;border-radius:0.75rem;font-size:13px;font-weight:700;text-decoration:none;background:rgba(78,222,163,0.1);text-align:center;margin-bottom:0.75rem;">Let's get connected!</a>
+        <a href="contact.html" style="display:block;color:#bccbb9;border:1px solid rgba(255,255,255,0.1);padding:0.75rem;border-radius:0.75rem;font-size:13px;font-weight:700;text-decoration:none;text-align:center;">Contact me</a>
+      </section>
+    </main>
+  </div>
+
+  <script src="../shared/sheet-data.js"></script>
+  <script src="../shared/nav-data.js"></script>
+  <script src="../shared/content-sync.js"></script>
+  <script src="../shared/load-components.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', async function() {
+
+    function esc(str) { var d = document.createElement('div'); d.textContent = str || ''; return d.innerHTML; }
+    function img(p) { return p ? '../' + p.replace(/^\.\.\//, '') : ''; }
+
+    function showSkeleton() {
+      var html = '';
+      html += '<div class="col-span-12 lg:col-span-8"><div class="glass-panel rounded-xl overflow-hidden"><div class="aspect-[16/9] md:aspect-[21/9] skeleton w-full"></div><div class="p-6 md:p-8 space-y-4"><div class="flex justify-between"><div class="h-4 w-24 skeleton"></div><div class="h-4 w-20 skeleton"></div></div><div class="h-8 w-3/4 skeleton"></div><div class="h-5 w-full skeleton"></div><div class="h-5 w-5/6 skeleton"></div></div></div></div>';
+      html += '<div class="col-span-12 lg:col-span-4"><div class="glass-panel rounded-xl overflow-hidden"><div class="aspect-square skeleton w-full"></div><div class="p-4 md:p-6 space-y-3"><div class="flex justify-between"><div class="h-4 w-20 skeleton"></div><div class="h-4 w-16 skeleton"></div></div><div class="h-6 w-3/4 skeleton"></div><div class="h-4 w-full skeleton"></div></div></div></div>';
+      html += '<div class="col-span-12"><div class="glass-panel rounded-xl overflow-hidden"><div class="flex flex-col md:flex-row"><div class="p-6 md:p-8 md:w-3/5 space-y-4"><div class="flex gap-4"><div class="h-5 w-16 skeleton"></div><div class="h-5 w-24 skeleton"></div></div><div class="h-8 w-3/4 skeleton"></div><div class="h-5 w-full skeleton"></div><div class="h-5 w-5/6 skeleton"></div></div><div class="md:w-2/5 min-h-[300px] skeleton"></div></div></div></div>';
+      document.getElementById('insights-grid').innerHTML = html;
+    }
+
+    function buildCard(insight) {
+      var layout = insight.layout || 'featured';
+      var hasImage = insight.imageDir && insight.imageDir.trim();
+      var hasUrl = insight.postUrl && insight.postUrl.trim();
+      var linkOpen = hasUrl ? ' onclick="window.open(\'' + esc(insight.postUrl) + '\',\'_blank\')"' : '';
+
+      switch (layout) {
+        case 'featured':
+          return '<article class="col-span-12 lg:col-span-8 group cursor-pointer"' + linkOpen + '>'
+            + '<div class="glass-panel hairline-border rounded-xl overflow-hidden h-full flex flex-col transition-all duration-300 hover:border-primary/40">'
+            + '<div class="aspect-[16/9] md:aspect-[21/9] w-full bg-surface-container overflow-hidden">'
+            + (hasImage
+              ? '<img alt="' + esc(insight.title) + '" class="w-full h-full object-contain bg-surface-container-low p-4 transition-transform duration-700 group-hover:scale-105" src="' + img(insight.imageDir) + '"/>'
+              : '<div class="w-full h-full bg-gradient-to-br from-primary/10 to-primary-fixed/10 flex items-center justify-center"><span class="font-label-md text-label-md text-primary/40">' + esc(getInitials(insight.title || 'Featured')) + '</span></div>')
+            + '</div>'
+            + '<div class="p-6 md:p-8 flex-1 flex flex-col">'
+            + '<div class="flex justify-between items-center mb-6">'
+            + '<span class="font-label-sm text-label-sm text-on-surface-variant">' + esc((insight.readTime || '').toUpperCase()) + '</span>'
+            + '<span class="font-label-sm text-label-sm text-primary">' + esc(insight.category || '') + '</span>'
+            + '</div>'
+            + '<h2 class="font-headline-lg text-headline-lg text-white mb-4 group-hover:text-primary transition-colors">' + esc(insight.title) + '</h2>'
+            + '<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-2xl">' + esc(insight.description) + '</p>'
+            + '<div class="mt-auto flex items-center gap-4">'
+            + '<span class="font-label-md text-label-md text-white border-b border-primary/50 pb-1">' + esc(insight.ctaText || 'Read More') + '</span>'
+            + '<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>'
+            + '</div></div></div></article>';
+
+        case 'side':
+          return '<article class="col-span-12 lg:col-span-4 group cursor-pointer"' + linkOpen + '>'
+            + '<div class="glass-panel hairline-border rounded-xl h-full flex flex-col transition-all duration-300 hover:border-primary/40">'
+            + '<div class="aspect-square w-full bg-surface-container overflow-hidden border-b border-white/10">'
+            + (hasImage
+              ? '<img alt="' + esc(insight.title) + '" class="w-full h-full object-contain bg-surface-container-low p-4 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" src="' + img(insight.imageDir) + '"/>'
+              : '<div class="w-full h-full bg-gradient-to-br from-primary/10 to-primary-fixed/10 flex items-center justify-center"><span class="font-label-md text-label-md text-primary/40">' + esc(getInitials(insight.title || 'Insight')) + '</span></div>')
+            + '</div>'
+            + '<div class="p-4 md:p-6">'
+            + '<div class="flex justify-between items-center mb-4">'
+            + '<span class="font-label-sm text-label-sm text-on-surface-variant">' + esc(insight.readTime ? (insight.readTime.toUpperCase() + ' READ') : '') + '</span>'
+            + '<span class="font-label-sm text-label-sm text-primary">' + esc(insight.category || '') + '</span>'
+            + '</div>'
+            + '<h3 class="font-headline-md text-headline-md text-white mb-3">' + esc(insight.title) + '</h3>'
+            + '<p class="font-body-sm text-body-sm text-on-surface-variant">' + esc(insight.description) + '</p>'
+            + '</div></div></article>';
+
+        case 'full':
+          return '<article class="col-span-12 group cursor-pointer"' + linkOpen + '>'
+            + '<div class="glass-panel hairline-border rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/40 flex flex-col md:flex-row">'
+            + '<div class="p-6 md:p-8 md:w-3/5 flex flex-col">'
+            + '<div class="flex items-center gap-4 mb-6">'
+            + '<span class="font-label-sm text-label-sm px-2 py-1 bg-primary/10 text-primary hairline-border rounded">' + esc(insight.category || '') + '</span>'
+            + '<span class="font-label-sm text-label-sm text-on-surface-variant">' + esc(insight.date || insight.readTime || '') + '</span>'
+            + '</div>'
+            + '<h2 class="font-headline-lg text-headline-lg text-white mb-6">' + esc(insight.title) + '</h2>'
+            + '<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-xl">' + esc(insight.description) + '</p>'
+            + '<div class="mt-auto"><span class="font-label-md text-label-md text-white border-b border-primary/50 pb-1">' + esc(insight.ctaText || 'Read More') + '</span></div>'
+            + '</div>'
+            + '<div class="md:w-2/5 min-h-[300px] bg-surface-container overflow-hidden">'
+            + (hasImage
+              ? '<img alt="' + esc(insight.title) + '" class="w-full h-full object-contain bg-surface-container-low p-4 group-hover:scale-110 transition-transform duration-1000" src="' + img(insight.imageDir) + '"/>'
+              : '<div class="w-full h-full bg-gradient-to-br from-primary/10 to-primary-fixed/10 flex items-center justify-center"><span class="font-label-md text-label-md text-primary/40">' + esc(getInitials(insight.title || 'Full')) + '</span></div>')
+            + '</div></div></article>';
+
+        default:
+          return '';
+      }
+    }
+
+    function buildTabletInsightHTML(i) {
+      var hasImage = i.imageDir && i.imageDir.trim();
+      var hasUrl = i.postUrl && i.postUrl.trim();
+      var clickAttr = hasUrl ? ' onclick="window.open(\'' + esc(i.postUrl) + '\',\'_blank\')" style="cursor:pointer;"' : '';
+      var html = '<div' + clickAttr + ' style="background:rgba(30,41,59,0.7);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:1rem;overflow:hidden;display:flex;flex-direction:column;transition:border-color 0.3s;">';
+      html += '<div style="aspect-ratio:16/9;overflow:hidden;background:#0b1326;">';
+      if (hasImage) {
+        html += '<img src="' + img(i.imageDir) + '" style="width:100%;height:100%;object-fit:contain;padding:0.5rem;" alt="' + esc(i.title) + '"/>';
+      } else {
+        html += '<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(78,222,163,0.05),rgba(78,222,163,0.05));"><span style="color:rgba(78,222,163,0.3);font-size:14px;font-weight:700;">' + esc(getInitials(i.title)) + '</span></div>';
+      }
+      html += '</div>';
+      html += '<div style="padding:1.5rem;flex:1;display:flex;flex-direction:column;">';
+      html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">';
+      html += '<span style="color:#bccbb9;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;">' + esc((i.readTime || '').toUpperCase()) + '</span>';
+      html += '<span style="color:#4be277;font-size:11px;font-weight:700;">' + esc(i.category || '') + '</span>';
+      html += '</div>';
+      html += '<h3 style="font-size:18px;font-weight:600;color:#dae2fd;margin-bottom:0.75rem;">' + esc(i.title) + '</h3>';
+      html += '<p style="color:#bccbb9;font-size:13px;margin-bottom:1.5rem;flex:1;">' + esc(i.description) + '</p>';
+      html += '<span style="display:inline-flex;align-items:center;gap:0.5rem;color:#4be277;font-size:13px;font-weight:600;text-decoration:none;">' + esc(i.ctaText || 'Read More') + ' <span style="font-size:16px;">&rarr;</span></span>';
+      html += '</div></div>';
+      return html;
+    }
+
+    function buildMobileInsightHTML(i) {
+      var hasImage = i.imageDir && i.imageDir.trim();
+      var hasUrl = i.postUrl && i.postUrl.trim();
+      var clickAttr = hasUrl ? ' onclick="window.open(\'' + esc(i.postUrl) + '\',\'_blank\')" style="cursor:pointer;"' : '';
+      var html = '<div' + clickAttr + ' style="background:rgba(30,41,59,0.7);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:1rem;overflow:hidden;">';
+      if (hasImage) {
+        html += '<div style="aspect-ratio:16/9;overflow:hidden;background:#0b1326;"><img src="' + img(i.imageDir) + '" style="width:100%;height:100%;object-fit:contain;padding:0.5rem;" alt="' + esc(i.title) + '"/></div>';
+      }
+      html += '<div style="padding:1.25rem;">';
+      html += '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">';
+      html += '<span style="color:#bccbb9;font-size:10px;text-transform:uppercase;letter-spacing:0.1em;">' + esc((i.readTime || '').toUpperCase()) + '</span>';
+      html += '<span style="color:#4be277;font-size:10px;font-weight:700;">' + esc(i.category || '') + '</span>';
+      html += '</div>';
+      html += '<h3 style="font-size:16px;font-weight:600;color:#dae2fd;margin-bottom:0.5rem;">' + esc(i.title) + '</h3>';
+      html += '<p style="color:#bccbb9;font-size:12px;margin-bottom:1rem;">' + esc(i.description) + '</p>';
+      html += '<span style="color:#4be277;font-size:12px;font-weight:600;">' + esc(i.ctaText || 'Read More') + ' &rarr;</span>';
+      html += '</div></div>';
+      return html;
+    }
+
+    showSkeleton();
+    var tGrid = document.getElementById('insights-grid-tablet');
+    var mGrid = document.getElementById('insights-grid-mobile');
+    if (tGrid) tGrid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:2rem;"><p style="color:#bccbb9;">Loading...</p></div>';
+    if (mGrid) mGrid.innerHTML = '<p style="color:#bccbb9;text-align:center;padding:2rem;">Loading...</p>';
+
+    try {
+      var insights = await fetchTab(SHEET_GIDS.insights);
+      var valid = insights.filter(function(i) { return i.title && i.title.trim(); });
+      document.getElementById('insights-grid').innerHTML = valid.length ? valid.map(buildCard).join('') : '<div class="col-span-12 text-center py-16"><p class="font-body-lg text-body-lg text-on-surface-variant">No insights to display yet.</p></div>';
+      if (tGrid) tGrid.innerHTML = valid.length ? valid.map(buildTabletInsightHTML).join('') : '<p style="grid-column:1/-1;text-align:center;color:#bccbb9;padding:2rem;">No insights yet.</p>';
+      if (mGrid) mGrid.innerHTML = valid.length ? valid.map(buildMobileInsightHTML).join('') : '<p style="text-align:center;color:#bccbb9;padding:2rem;">No insights yet.</p>';
+    } catch (err) {
+      document.getElementById('insights-grid').innerHTML = '<div class="col-span-12 text-center py-16"><p class="font-body-lg text-body-lg text-on-surface-variant">Failed to load insights. Please try again later.</p></div>';
+      if (tGrid) tGrid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:#bccbb9;padding:2rem;">Failed to load insights.</p>';
+      if (mGrid) mGrid.innerHTML = '<p style="text-align:center;color:#bccbb9;padding:2rem;">Failed to load insights.</p>';
+      console.error(err);
+    }
+  });
+  </script>
+</body>
+</html>
