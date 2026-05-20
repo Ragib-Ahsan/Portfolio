@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Ragib Ahsan</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="shared/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="shared/styles.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed" data-page="index">
+
+  <!-- ===== DESKTOP FACE ===== -->
+  <div class="viewport-desktop">
+    <div id="nav-desktop"></div>
+
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16">
+      <!-- Hero Section -->
+      <section id="d-hero" class="grid grid-cols-12 gap-gutter mb-16 md:mb-24 items-center">
+        <div class="col-span-12 md:col-span-8">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_12px_rgba(34,197,94,0.5)]"></span>
+            <span id="d-status" class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Available for New Opportunities</span>
+          </div>
+          <h1 id="d-hero-title" class="text-[clamp(1.75rem,5vw,2.5rem)] md:text-headline-xl font-semibold leading-tight md:leading-snug mb-6 max-w-3xl">
+            Turning ambiguous problems into <span class="text-primary">structured products, clear execution, and real-world user solutions.</span>
+          </h1>
+          <p id="d-hero-sub" class="font-headline-md text-headline-md text-on-surface-variant mb-8 max-w-2xl leading-relaxed">
+            Aspiring Product &amp; Project Manager with a background in engineering, systems thinking, and behavior-driven problem solving.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a id="d-explore-link" href="pages/portfolio.html" class="bg-primary-fixed text-on-primary-fixed font-label-md text-label-md px-8 py-4 rounded-lg flex items-center gap-2 hover:brightness-110 transition-all no-underline">
+              Explore My Work
+              <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+            </a>
+            <a id="d-resume-link" href="pages/resume.html" class="hairline-border bg-white/5 text-on-surface font-label-md text-label-md px-8 py-4 rounded-lg hover:bg-white/10 transition-all no-underline">
+              View Resume
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:block md:col-span-4 relative h-[300px] md:h-[400px]">
+          <div class="absolute inset-0 glass-panel rounded-2xl overflow-hidden shadow-2xl">
+            <img id="d-hero-img" alt="Ragib Ahsan Professional Portrait" class="w-full h-full object-cover" src="assets/DP/Ragib (2).png"/>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro Paragraph -->
+      <section id="d-philosophy" class="mb-16 md:mb-24">
+        <div class="glass-panel p-6 md:p-12 rounded-2xl">
+          <div>
+            <h2 id="d-phil-heading" class="font-label-sm text-label-sm text-primary-fixed mb-4 uppercase tracking-widest">Philosophy</h2>
+            <p id="d-phil-p1" class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-4">
+              I specialize in breaking down ambiguous problems into clear product requirements, workflows, and measurable outcomes by bridging the gap between business, users, and engineering. The approach is rooted in systems thinking, stakeholder alignment, and practical execution.
+            </p>
+            <p id="d-phil-p2" class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              My interest particularly lies in how products behave in the real world especially in environments where infrastructure, user habits, and operational realities are imperfect. Rather than designing for ideal scenarios, the focus remains on simplifying complexity and building solutions that people can realistically adopt, use consistently, and derive long-term value from.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Strengths Bento Grid -->
+      <section id="d-strengths" class="mb-16 md:mb-24">
+        <div class="mb-8 md:mb-12">
+          <h2 id="d-strengths-heading" class="font-headline-lg text-headline-lg mb-2">Core Strengths</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-gutter">
+          <div id="d-strength-1" class="glass-panel p-6 md:p-8 rounded-2xl group hover:border-primary/50 transition-colors">
+            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 text-primary">
+              <span class="material-symbols-outlined text-[32px]">tactic</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-4">Product Thinking</h3>
+            <p class="text-on-surface-variant font-body-md mb-6">Structuring ambiguous ideas into clear product requirements, workflows, and prioritized solutions aligned with user and business needs.</p>
+            <div>
+              <p class="font-label-sm text-label-sm text-primary mb-2 uppercase tracking-wider">Includes</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">PRD Writing</span>
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">User Flows</span>
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">Feature Prioritization</span>
+              </div>
+            </div>
+          </div>
+          <div id="d-strength-2" class="glass-panel p-6 md:p-8 rounded-2xl group hover:border-primary/50 transition-colors">
+            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 text-primary">
+              <span class="material-symbols-outlined text-[32px]">assignment</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-4">Project Execution</h3>
+            <p class="text-on-surface-variant font-body-md mb-6">Managing coordination, timelines, stakeholder communication, and delivery processes to keep initiatives structured and execution-focused.</p>
+            <div>
+              <p class="font-label-sm text-label-sm text-primary mb-2 uppercase tracking-wider">Includes</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">Agile Workflows</span>
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">Sprint Planning</span>
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">Cross-functional Coordination</span>
+              </div>
+            </div>
+          </div>
+          <div id="d-strength-3" class="glass-panel p-6 md:p-8 rounded-2xl group hover:border-primary/50 transition-colors">
+            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 text-primary">
+              <span class="material-symbols-outlined text-[32px]">account_tree</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-4">Systems &amp; Operational Thinking</h3>
+            <p class="text-on-surface-variant font-body-md mb-6">Understanding how products function beyond interfaces, including workflows, operational dependencies, scalability, and execution realities.</p>
+            <div>
+              <p class="font-label-sm text-label-sm text-primary mb-2 uppercase tracking-wider">Includes</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">Workflow Design</span>
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">Process Structuring</span>
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">Operational Alignment</span>
+              </div>
+            </div>
+          </div>
+          <div id="d-strength-4" class="glass-panel p-6 md:p-8 rounded-2xl group hover:border-primary/50 transition-colors">
+            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 text-primary">
+              <span class="material-symbols-outlined text-[32px]">analytics</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-4">Research &amp; Analytical Decision Making</h3>
+            <p class="text-on-surface-variant font-body-md mb-6">Using structured research, market understanding, and analytical thinking to support product direction and decision-making.</p>
+            <div>
+              <p class="font-label-sm text-label-sm text-primary mb-2 uppercase tracking-wider">Includes</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">User &amp; Market Research</span>
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">Competitive Analysis</span>
+                <span class="bg-surface-container-high px-3 py-1 rounded-full text-label-sm font-label-sm text-on-surface-variant">Data-informed Insights</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Highlights -->
+      <section id="d-highlights" class="grid grid-cols-12 gap-gutter mb-16 md:mb-24">
+        <div class="col-span-12 lg:col-span-4">
+          <div class="sticky top-24">
+            <h2 id="d-highlights-heading" class="font-headline-lg text-headline-lg mb-6">Execution Highlights</h2>
+            <p id="d-highlights-desc" class="text-on-surface-variant mb-8">A snapshot of the projects, systems thinking, and execution capabilities shaping my product and project management journey.</p>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-4 p-4 hairline-border rounded-xl bg-white/5">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">description</span>
+                <div>
+                  <p class="font-label-md text-label-md text-on-surface mb-1">Product Documentation</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant">PRDs, workflows, and structured feature planning</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 p-4 hairline-border rounded-xl bg-white/5">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+                <div>
+                  <p class="font-label-md text-label-md text-on-surface mb-1">Robotics & Systems Projects</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant">Hands-on technical leadership and systems experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="glass-panel p-4 md:p-6 rounded-xl flex flex-col justify-between h-auto md:h-48 border-l-4 border-l-primary">
+            <span class="font-label-sm text-label-sm text-primary mb-2">EXECUTION</span>
+            <h4 class="font-headline-md text-headline-md mb-2">Workflow Coordination</h4>
+            <p class="text-on-surface-variant text-body-sm">Structuring tasks, communication, and ownership to keep projects aligned and execution-focused.</p>
+          </div>
+          <div class="glass-panel p-4 md:p-6 rounded-xl flex flex-col justify-between h-auto md:h-48">
+            <span class="font-label-sm text-label-sm text-secondary mb-2">AGILE</span>
+            <h4 class="font-headline-md text-headline-md mb-2">Iterative Delivery</h4>
+            <p class="text-on-surface-variant text-body-sm">Applying sprint-based planning and adaptive workflows to manage evolving product requirements.</p>
+          </div>
+          <div class="glass-panel p-4 md:p-6 rounded-xl flex flex-col justify-between h-auto md:h-48">
+            <span class="font-label-sm text-label-sm text-secondary mb-2">RESEARCH</span>
+            <h4 class="font-headline-md text-headline-md mb-2">Product Analysis</h4>
+            <p class="text-on-surface-variant text-body-sm">Conducting structured research, competitive analysis, and problem framing to support product decisions.</p>
+          </div>
+          <div class="glass-panel p-4 md:p-6 rounded-xl flex flex-col justify-between h-auto md:h-48 border-l-4 border-l-primary">
+            <span class="font-label-sm text-label-sm text-primary mb-2">COLLABORATION</span>
+            <h4 class="font-headline-md text-headline-md mb-2">Cross-Functional Alignment</h4>
+            <p class="text-on-surface-variant text-body-sm">Bridging technical, operational, and business perspectives to support smooth project execution.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcome CTA -->
+      <section id="d-cta" class="mb-16 md:mb-24">
+        <div class="relative rounded-2xl md:rounded-3xl overflow-hidden p-8 md:p-16 text-center border border-primary/20">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-50"></div>
+          <div class="relative z-10 max-w-2xl mx-auto">
+            <h2 id="d-cta-heading" class="font-headline-lg text-headline-lg mb-6">Want to work with a PM who delivers?</h2>
+            <p id="d-cta-desc" class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">I am currently looking for opportunities in Product, Project, or Digital Delivery roles where I can apply structured thinking, cross-functional coordination, and execution-focused product work.</p>
+            <div class="flex justify-center gap-6">
+              <a id="d-cta-btn" href="pages/contact.html" class="bg-primary text-on-primary px-10 py-4 rounded-lg font-label-md text-label-md flex items-center gap-2 hover:scale-105 transition-all no-underline">
+                Start a Conversation
+                <span class="material-symbols-outlined text-[20px]">mail</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+  </div>
+
+  <!-- ===== TABLET FACE ===== -->
+  <div class="viewport-tablet">
+    <div id="nav-tablet"></div>
+
+    <main style="padding-top: 5rem; padding-bottom: 4rem; max-width: 1280px; margin: 0 auto; padding-left: 2rem; padding-right: 2rem;">
+      <!-- Hero: 7/5 split -->
+      <section style="display: grid; grid-template-columns: 7fr 5fr; gap: 1.5rem; align-items: center; margin-bottom: 4rem;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 12px rgba(34,197,94,0.5);"></span>
+            <span data-sync="d-status" style="font-size: 12px; letter-spacing: 0.2em; color: #4be277; text-transform: uppercase;"></span>
+          </div>
+          <h1 data-sync="d-hero-title" style="font-size: 40px; font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 1.5rem; color: #dae2fd;"></h1>
+          <p data-sync="d-hero-sub" style="font-size: 18px; color: #bccbb9; margin-bottom: 2rem; max-width: 36rem;"></p>
+          <div style="display: flex; gap: 1rem;">
+            <a data-sync="d-explore-link" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #6bff8f; color: #002109; padding: 0.75rem 2rem; border-radius: 9999px; font-size: 14px; font-weight: 700; text-decoration: none;"></a>
+            <a data-sync="d-resume-link" style="display: inline-flex; align-items: center; padding: 0.75rem 2rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.1); font-size: 14px; font-weight: 700; color: #dae2fd; text-decoration: none; background: rgba(255,255,255,0.05);"></a>
+          </div>
+        </div>
+        <div style="aspect-ratio: 4/5; border-radius: 1.5rem; overflow: hidden; background: rgba(30,41,59,0.7); border: 1px solid rgba(255,255,255,0.1);">
+          <img data-sync="d-hero-img" style="width: 100%; height: 100%; object-fit: cover;" alt="Ragib Ahsan"/>
+        </div>
+      </section>
+
+      <!-- Philosophy -->
+      <section data-sync="d-philosophy" style="margin-bottom: 4rem;"></section>
+
+      <!-- Strengths 2x2 -->
+      <section style="margin-bottom: 4rem;">
+        <h2 style="font-size: 32px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 2rem; color: #dae2fd;">Core Strengths</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          <div data-sync="d-strength-1"></div>
+          <div data-sync="d-strength-2"></div>
+          <div data-sync="d-strength-3"></div>
+          <div data-sync="d-strength-4"></div>
+        </div>
+      </section>
+
+      <!-- Highlights -->
+      <section data-sync="d-highlights" style="margin-bottom: 4rem;"></section>
+
+      <!-- CTA -->
+      <section data-sync="d-cta"></section>
+    </main>
+
+    <div id="site-footer"></div>
+  </div>
+
+  <!-- ===== MOBILE FACE ===== -->
+  <div class="viewport-mobile">
+    <div class="reading-progress" id="reading-progress">
+      <div class="reading-progress-bar" id="reading-progress-bar"></div>
+    </div>
+
+    <div id="nav-mobile"></div>
+
+    <main style="padding-top: 5rem; padding-bottom: 5rem; padding-left: 1rem; padding-right: 1rem;">
+      <!-- Hero stacked -->
+      <section style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 3rem;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+            <span style="width: 6px; height: 6px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 12px rgba(34,197,94,0.5);"></span>
+            <span data-sync="d-status" style="font-size: 11px; letter-spacing: 0.2em; color: #4be277; text-transform: uppercase;"></span>
+          </div>
+          <h1 data-sync="d-hero-title" style="font-size: 30px; font-weight: 600; line-height: 1.2; margin-bottom: 1rem; color: #dae2fd;"></h1>
+          <p data-sync="d-hero-sub" style="font-size: 16px; color: #bccbb9; margin-bottom: 1.5rem;"></p>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <a data-sync="d-explore-link" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; background: #6bff8f; color: #002109; padding: 0.875rem 2rem; border-radius: 0.75rem; font-size: 14px; font-weight: 700; text-decoration: none;"></a>
+            <a data-sync="d-resume-link" style="display: flex; align-items: center; justify-content: center; padding: 0.875rem 2rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); font-size: 14px; font-weight: 700; color: #dae2fd; text-decoration: none; background: rgba(255,255,255,0.05);"></a>
+          </div>
+        </div>
+        <div style="border-radius: 1rem; overflow: hidden; background: rgba(30,41,59,0.7); border: 1px solid rgba(255,255,255,0.1);">
+          <img data-sync="d-hero-img" style="width: 100%; height: auto; display: block;" alt="Ragib Ahsan"/>
+        </div>
+      </section>
+
+      <!-- Philosophy -->
+      <section data-sync="d-philosophy" style="margin-bottom: 3rem;"></section>
+
+      <!-- Strengths accordion -->
+      <section style="margin-bottom: 3rem;">
+        <h2 style="font-size: 28px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 1.5rem; color: #dae2fd;">Core Strengths</h2>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <div data-sync="d-strength-1" style="background: rgba(30,41,59,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 1.25rem;"></div>
+          <div data-sync="d-strength-2" style="background: rgba(30,41,59,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 1.25rem;"></div>
+          <div data-sync="d-strength-3" style="background: rgba(30,41,59,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 1.25rem;"></div>
+          <div data-sync="d-strength-4" style="background: rgba(30,41,59,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 1.25rem;"></div>
+        </div>
+      </section>
+
+      <!-- Highlights -->
+      <section data-sync="d-highlights" style="margin-bottom: 3rem;"></section>
+
+      <!-- CTA -->
+      <section data-sync="d-cta"></section>
+    </main>
+  </div>
+
+  <script src="shared/nav-data.js"></script>
+  <script src="shared/content-sync.js"></script>
+  <script src="shared/load-components.js"></script>
+</body>
+</html>
